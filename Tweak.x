@@ -82,9 +82,6 @@ static void hookClass(NSObject *instance) {
         hookClass(globalConfig);
         hookClass(coldConfig);
         hookClass(hotConfig);
-        // if (!groupedSettings()) {
-        //     SearchHook();
-        // }
     }
 }
 
