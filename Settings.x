@@ -8,6 +8,7 @@
 #import <YouTubeMusicHeader/YTMSettingsSectionController.h>
 #import <YouTubeMusicHeader/YTMSettingsSectionItem.h>
 #import <rootless.h>
+#import <sys/utsname.h>
 
 #define TWEAK_NAME @"A/B"
 #define Prefix @"YTMABC"
@@ -104,6 +105,12 @@ static void pushCollectionViewController(YTMSettingsResponseViewController *self
 static void makeSelecty(YTMSettingsSectionItem *item) {
     item.indicatorIconType = 221;
     item.inkEnabled = YES;
+}
+
+static NSString *getHardwareModel() {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    return [NSString stringWithUTF8String:systemInfo.machine];
 }
 
 %hook YTMSettingsResponseViewController
@@ -257,7 +264,7 @@ static void makeSelecty(YTMSettingsSectionItem *item) {
                         }];
                     }
                     [content sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
-                    [content insertObject:[NSString stringWithFormat:@"Device model: %@", [%c(YTCommonUtils) hardwareModel]] atIndex:0];
+                    [content insertObject:[NSString stringWithFormat:@"Device model: %@", getHardwareModel()] atIndex:0];
                     [content insertObject:[NSString stringWithFormat:@"App version: %@", [%c(YTVersionUtils) appVersion]] atIndex:0];
                     [content insertObject:EXCLUDED_METHODS atIndex:0];
                     [content insertObject:INCLUDED_CLASSES atIndex:0];
