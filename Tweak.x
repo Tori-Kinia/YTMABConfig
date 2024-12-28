@@ -69,16 +69,16 @@ static void hookClass(NSObject *instance) {
     %orig;
     if (tweakEnabled()) {
         id mdxServices = [self valueForKey:@"_MDXServices"];
-        HBLogInfo(@"YTMM MDXServices: %@", mdxServices);
+        HBLogDebug(@"YTMM MDXServices: %@", mdxServices);
         YTMSettings *settings = [mdxServices valueForKey:@"_MDXConfig"];
-        HBLogInfo(@"YTMM Settings: %@", settings);
+        HBLogDebug(@"YTMM Settings: %@", settings);
         updateAllKeys();
         YTGlobalConfig *globalConfig = [settings valueForKey:@"_globalConfig"];
         YTColdConfig *coldConfig = [settings valueForKey:@"_coldConfig"];
         YTHotConfig *hotConfig = [settings valueForKey:@"_hotConfig"];
-        HBLogInfo(@"YTMM GlobalConfig: %@", globalConfig);
-        HBLogInfo(@"YTMM ColdConfig: %@", coldConfig);
-        HBLogInfo(@"YTMM HotConfig: %@", hotConfig);
+        HBLogDebug(@"YTMM GlobalConfig: %@", globalConfig);
+        HBLogDebug(@"YTMM ColdConfig: %@", coldConfig);
+        HBLogDebug(@"YTMM HotConfig: %@", hotConfig);
         hookClass(globalConfig);
         hookClass(coldConfig);
         hookClass(hotConfig);
