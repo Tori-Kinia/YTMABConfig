@@ -1,8 +1,8 @@
-#import <YouTubeHeader/GOOHeaderViewController.h>
-#import <YouTubeHeader/GOOHUDManagerInternal.h>
-#import <YouTubeHeader/YTCommonUtils.h>
-#import <YouTubeHeader/YTUIUtils.h>
-#import <YouTubeHeader/YTVersionUtils.h>
+#import <YouTubeMusicHeader/GOOHeaderViewController.h>
+#import <YouTubeMusicHeader/GOOHUDManagerInternal.h>
+#import <YouTubeMusicHeader/YTCommonUtils.h>
+#import <YouTubeMusicHeader/YTUIUtils.h>
+#import <YouTubeMusicHeader/YTVersionUtils.h>
 #import <YouTubeMusicHeader/YTMAlertView.h>
 #import <YouTubeMusicHeader/YTMSettingsResponseViewController.h>
 #import <YouTubeMusicHeader/YTMSettingsSectionController.h>
