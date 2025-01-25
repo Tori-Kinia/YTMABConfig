@@ -1,6 +1,6 @@
-#import <YouTubeHeader/YTGlobalConfig.h>
-#import <YouTubeHeader/YTColdConfig.h>
-#import <YouTubeHeader/YTHotConfig.h>
+#import <YouTubeMusicHeader/YTGlobalConfig.h>
+#import <YouTubeMusicHeader/YTColdConfig.h>
+#import <YouTubeMusicHeader/YTHotConfig.h>
 #import <YouTubeMusicHeader/YTMAppDelegate.h>
 #import <YouTubeMusicHeader/YTMMenuController.h>
 #import <substrate.h>
